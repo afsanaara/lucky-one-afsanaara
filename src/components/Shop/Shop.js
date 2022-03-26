@@ -10,7 +10,8 @@ const Shop = () => {
         .then(data=>setProducts(data))
     },[])
     return (
-        <div className='shop-container'>
+        <div className='container'>
+            <div className='shop-container'>
             
             <div className="product-container">
                {
@@ -23,8 +24,10 @@ const Shop = () => {
 
             <div className="cart-container">
                 <h2 className='title'>Order Summary</h2>
+                <p>Selected Items:</p>
             </div>
             
+        </div>
         </div>
     );
 };
