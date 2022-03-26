@@ -6,6 +6,7 @@ import './Shop.css'
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart,setCart] = useState([]);
+    const [count, setCount] =useState(0);
     useEffect(()=>{
         fetch('data.json')
         .then(res=>res.json())
@@ -16,7 +17,12 @@ const Shop = () => {
         console.log(product);
 
         const newCart =[...cart,product];
-        setCart(newCart);
+        if(cart.length>=4){
+            setCount(0);
+        }
+        else{
+            setCart(newCart);
+        }
     }
     return (
         <div className='container'>
