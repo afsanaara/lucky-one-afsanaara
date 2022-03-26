@@ -1,8 +1,9 @@
 import React from 'react';
+import './Footer.css'
 
 const Footer = () => {
     return (
-        <div>
+        <div className='footer'>
             <h3>Props vs State</h3>
             <p>Props can read only. Props Cannot be Modified. State changes can be asynchonous. State can be modified using this.setState</p>
 
