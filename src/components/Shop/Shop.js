@@ -11,7 +11,7 @@ const Shop = () => {
     },[])
     return (
         <div className='shop-container'>
-            <h1>Supplement-House</h1>
+            
             <div className="product-container">
                {
                     products.map(product=><Product
@@ -19,6 +19,10 @@ const Shop = () => {
                         product={product}
                         ></Product>)
                }
+            </div>
+
+            <div className="cart-container">
+                <h2 className='title'>Order Summary</h2>
             </div>
             
         </div>
