@@ -5,6 +5,11 @@ import './Order.css';
 const Order = (props) => {
     const {cart, setCart} =props;
     
+    const randomProduct = cart[Math.floor(Math.random() * cart.length)];
+
+    const chooseOne = ()=>{
+        setCart([randomProduct])
+    }
     const chooseAgain=()=>{
         setCart([]);
     }
@@ -19,7 +24,7 @@ const Order = (props) => {
                     ></DisplayOrder>) 
                 }
 
-                <button className='Choose-one'>Choose one</button>
+                <button onClick={chooseOne} className='Choose-one'>Choose one</button>
                 <button onClick={chooseAgain} className='choose-again'>Choose Again</button>
                 
         </div>
