@@ -1,0 +1,15 @@
+.shop-container{
+    display: grid;
+    grid-template-columns: 4fr ,1fr;
+}
+
+.shop-container h1{
+    text-align: center;
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:45px;
+    margin: 100px 50px;
+}
